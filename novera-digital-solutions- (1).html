@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novera Digital Solutions </title>
+<meta name="description" content="Novera Digital Solutions  em Barreiras, Bahia e região.: Soluções digitais para empresas..">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Hanken+Grotesk:wght@400;600&family=Instrument+Serif&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --ink:#0A0A0A;--ink-2:#1a1a1a;--blue:#330000;--tile:#3A0A0E;--bone:#F0EDED;--white:#fff;
+  --muted:rgba(240,237,237,.76);--line:rgba(240,237,237,.16);--line-strong:rgba(240,237,237,.3);
+  --f-display:'Instrument Serif','Iowan Old Style','Times New Roman',serif;
+  --f-body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'DM Mono',ui-monospace,Menlo,monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 55% at 100% 0%,rgba(79,0,0,.20),transparent 60%),radial-gradient(90% 45% at 0% 100%,rgba(79,0,0,.14),transparent 60%),var(--ink);background-repeat:no-repeat;color:var(--bone);font:400 16px/1.55 var(--f-body);-webkit-font-smoothing:antialiased;min-height:100vh}
+p,ul{margin:0;padding:0}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.page{max-width:520px;margin:0 auto;padding:48px 24px 40px}
+
+.head{text-align:center}
+.lockup{display:flex;align-items:center;justify-content:center;gap:20px}
+.mark{height:clamp(46px,13.5vw,58px);width:auto;flex:none}
+.wordmark{font:400 clamp(34px,10.5vw,46px)/1 var(--f-display);letter-spacing:.14em;margin-right:-.14em;color:var(--white);text-align:left}
+.sub{margin-top:12px;font:500 12px/1 var(--f-mono);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-align:left}
+.note{margin-top:20px;color:var(--muted);font-size:15px}
+.where{margin-top:24px;display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;line-height:1.4}
+.where::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);flex:none}
+
+.col{margin-top:40px;display:grid;gap:16px}
+.item{display:grid;grid-template-columns:44px minmax(0,1fr) 18px;align-items:center;column-gap:16px;padding:16px;border:1px solid var(--line-strong);border-radius:6px;background:var(--ink-2);text-decoration:none;color:inherit;transition:border-color .2s ease;-webkit-tap-highlight-color:transparent}
+a.item:hover{border-color:var(--bone)}
+.tile{width:44px;height:44px;border-radius:4px;background:var(--tile);display:grid;place-items:center}
+.tile svg{width:28px;height:28px;display:block}
+.txt{min-width:0}
+.txt strong{display:block;font:600 16px/1.3 var(--f-body);color:var(--white)}
+.txt span{display:block;margin-top:2px;font-size:13px;line-height:1.45;color:var(--muted)}
+.go{width:18px;height:18px;color:var(--bone)}
+.item[aria-disabled="true"]{cursor:default}
+.item[aria-disabled="true"] .go{opacity:.35}
+[hidden]{display:none!important}
+
+.foot{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--muted)}
+.pix{margin-top:16px;padding:16px;border:1px solid var(--line-strong);border-radius:6px;background:var(--ink-2);display:grid;gap:16px}
+.pix-top{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;column-gap:16px}
+.key{padding:12px 16px;border:1px solid var(--line);border-radius:4px;background:var(--ink);font:500 clamp(14px,4vw,16px)/1.4 var(--f-mono);color:var(--white);overflow-wrap:anywhere}
+.copy{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;border:1px solid var(--blue);border-radius:6px;background:var(--blue);color:#fff;font:600 15px/1 var(--f-body);cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.copy svg{width:18px;height:18px;flex:none}
+.copy:hover{background:#330000;filter:brightness(1.15);border-color:#330000}
+.copy[data-state="copied"]{background:var(--bone);border-color:var(--bone);color:var(--ink)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a.item:hover{border-color:#330000}
+.ad{margin-top:32px;text-align:center}
+.ad-toggle{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid var(--line-strong);border-radius:999px;background:transparent;color:var(--muted);font:600 14px var(--f-body);cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.ad-toggle:hover{border-color:var(--bone);color:var(--white)}
+.ad-toggle svg{width:14px;height:14px;transition:transform .3s ease}
+.ad-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ad-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;text-align:left}
+.ad-panel.open{grid-template-rows:1fr}
+.ad-inner{overflow:hidden;min-height:0;visibility:hidden;transition:visibility 0s linear .35s}
+.ad-panel.open .ad-inner{visibility:visible;transition-delay:0s}
+.ad-card{margin-top:12px;padding:24px 20px;border:1px solid var(--line-strong);border-radius:6px;background:var(--ink-2)}
+.ad-brand{font:400 22px/1 var(--f-display);letter-spacing:.14em;color:var(--white)}
+.ad-brand span{display:block;margin-top:8px;font:500 11px/1 var(--f-mono);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.ad h2{margin:20px 0 8px;font:400 clamp(24px,7vw,30px)/1.15 var(--f-display);color:var(--white);text-wrap:balance}
+.ad-text{color:var(--muted);font-size:15px}
+.ad-list{margin:20px 0;display:grid;gap:10px;font-size:14px}
+.ad-list li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:8px}
+.ad-list span{color:var(--muted)}
+.ad-list a{color:var(--white);overflow-wrap:anywhere}
+.ad-btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;text-align:center;border:1px solid var(--line-strong);border-radius:6px;color:var(--white);font:600 15px var(--f-body);text-decoration:none;transition:border-color .2s ease}
+.ad-btn:hover{border-color:var(--bone)}
+.tagline{margin-top:28px;font:400 clamp(26px,7.5vw,34px)/1.15 var(--f-display);color:var(--white);text-wrap:balance}
+.foot .tag{font:italic 400 22px/1.2 var(--f-display);color:var(--white);margin-bottom:12px;text-wrap:balance}
+.rv-on .rv{opacity:.2;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv-on .rv.in{opacity:1;transform:none}
+.rv-on .item.rv{transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),border-color .2s ease}
+@media (prefers-reduced-motion:reduce){.rv-on .rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <div class="lockup">
+      
+      <div>
+        <p class="wordmark">NOVERA</p>
+        <p class="sub">Digital Solutions </p>
+      </div>
+    </div>
+    <p class="tagline">Soluções digitais para o seu negócio.</p>
+    <p class="note">Soluções digitais para empresas.</p>
+    <p class="where">Barreiras, Bahia e região.</p>
+  </header>
+
+  <nav class="col" aria-label="Links da Novera Digital Solutions ">
+    <a class="item" id="i-wa" href="#" data-msg="Olá! Vi a Novera Digital Solutions  e gostaria de mais informações.">
+      <span class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.315 1.262.494 1.694.628.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+      <span class="txt"><strong>Fale conosco!</strong><span id="wa-sub">Atendimento pelo WhatsApp</span></span>
+      <svg class="go" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+
+    <a class="item" href="#" hidden>
+      <span class="tile"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg></span>
+      <span class="txt"><strong>Avalie no Google</strong><span>Sua opinião importa</span></span>
+      <svg class="go" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+
+
+    <a class="item" id="i-ig" href="#" target="_blank" rel="noopener" hidden>
+      <span class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".3" stop-color="#FA7E1E"/><stop offset=".55" stop-color="#D62976"/><stop offset=".8" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#ig)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="16.4" cy="7.6" r="1" fill="#fff"/></svg></span>
+      <span class="txt"><strong>Instagram</strong><span id="ig-sub">Siga a Novera Digital Solutions </span></span>
+      <svg class="go" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+  </nav>
+
+  <section class="pix" aria-labelledby="t-pix">
+    <div class="pix-top">
+      <span class="tile"><svg viewBox="-4 -4 40 40" aria-hidden="true"><g fill="#32BCAD"><rect x="11.5" y="3" width="9" height="9" rx="1.6" transform="rotate(45 16 7.5)"/><rect x="11.5" y="20" width="9" height="9" rx="1.6" transform="rotate(45 16 24.5)"/><rect x="3" y="11.5" width="9" height="9" rx="1.6" transform="rotate(45 7.5 16)"/><rect x="20" y="11.5" width="9" height="9" rx="1.6" transform="rotate(45 24.5 16)"/></g></svg></span>
+      <div class="txt"><strong id="t-pix">Pagamento via Pix</strong><span>Copie a chave e pague pelo app do seu banco</span></div>
+    </div>
+    <p class="key" id="pix-key"></p>
+    <button class="copy" id="pix-copy" type="button" data-state="idle">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      <span id="pix-label">Copiar chave Pix</span>
+    </button>
+    <span class="sr-only" id="pix-status" role="status" aria-live="polite"></span>
+  </section>
+
+  <footer class="foot"><p class="tag">Transformando negócios através da tecnologia.</p>© <span id="year">2026</span> Novera Digital Solutions  · Barreiras, Bahia e região.</footer>
+
+  <section class="ad" aria-label="NOVERA Digital Solutions">
+    <button class="ad-toggle" id="ad-toggle" type="button" aria-expanded="false" aria-controls="ad-panel">
+      <span>Conheça a NOVERA</span>
+      <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="ad-panel" id="ad-panel">
+      <div class="ad-inner">
+        <div class="ad-card">
+          <p class="ad-brand">NOVERA<span>Digital Solutions</span></p>
+          <h2 id="t-ad">Quer uma página como esta para o seu negócio?</h2>
+          <p class="ad-text">A NOVERA cria sites, landing pages, cardápios digitais e lojas para empresas e negócios locais.</p>
+          <ul class="ad-list">
+            <li><span>Telefone</span><a href="tel:+5577998515480">(77) 99851-5480</a></li>
+            <li><span>E-mail</span><a href="mailto:novera.digitalsolutions@gmail.com">novera.digitalsolutions@gmail.com</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/novera.ds/" target="_blank" rel="noopener">@novera.ds</a></li>
+          </ul>
+          <a class="ad-btn" href="https://wa.me/5577998515480?text=Ol%C3%A1!%20Vi%20a%20NOVERA%20na%20p%C3%A1gina%20da%20Novera%20Digital%20Solutions%20%20e%20quero%20um%20igual%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero o meu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* CONFIGURAÇÃO: edite só este bloco. Campo vazio = botão desativado ou escondido. Nada é inventado. */
+var CONFIG = {
+  "whatsapp": "5577998515480",
+  "whatsappLabel": "77 99851-5480",
+  "instagram": "https://www.instagram.com/novera.ds?cnvx=NnR3ZzFmMWF3Zjg4",
+  "instagramLabel": "@novera.ds",
+  "address": "Barreiras, Bahia e região.",
+  "maps": "",
+  "pixKey": "Novera.digitalsolutions@gmail.com"
+};
+(function(){
+  "use strict";
+  var $=function(s){return document.querySelector(s)};
+  function wire(el){
+    if(CONFIG.whatsapp){
+      el.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(el.getAttribute("data-msg"));
+      el.target="_blank";el.rel="noopener";
+    }else{
+      el.setAttribute("aria-disabled","true");el.title="WhatsApp ainda não configurado";
+      el.addEventListener("click",function(e){e.preventDefault()});
+    }
+  }
+  wire($("#i-wa"));
+  if(CONFIG.whatsappLabel){$("#wa-sub").textContent=CONFIG.whatsappLabel}
+  if(CONFIG.instagram){
+    var ig=$("#i-ig");ig.href=CONFIG.instagram;ig.hidden=false;
+    if(CONFIG.instagramLabel){$("#ig-sub").textContent=CONFIG.instagramLabel}
+  }
+  var pb=$("#pix-copy"),pl=$("#pix-label"),pk=$("#pix-key"),ps=$("#pix-status"),pt;
+  pk.textContent=CONFIG.pixKey;if(!CONFIG.pixKey){$(".pix").hidden=true}
+  function legacy(text){
+    try{var ta=document.createElement("textarea");ta.value=text;ta.setAttribute("readonly","");
+      ta.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(ta);ta.select();
+      ta.setSelectionRange(0,text.length);var ok=document.execCommand("copy");document.body.removeChild(ta);return ok}
+    catch(e){return false}
+  }
+  function copyText(text){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text).then(function(){return true},function(){return legacy(text)});
+    }
+    return Promise.resolve(legacy(text));
+  }
+  function setPix(state,label,msg){pb.setAttribute("data-state",state);pl.textContent=label;ps.textContent=msg}
+  pb.addEventListener("click",function(){
+    copyText(CONFIG.pixKey).then(function(ok){
+      clearTimeout(pt);
+      if(ok){setPix("copied","Chave copiada","Chave Pix copiada.")}
+      else{var sel=window.getSelection(),r=document.createRange();r.selectNodeContents(pk);sel.removeAllRanges();sel.addRange(r);
+        setPix("idle","Chave selecionada, copie","Não foi possível copiar sozinho. A chave está selecionada.")}
+      pt=setTimeout(function(){setPix("idle","Copiar chave Pix","")},2600);
+    });
+  });
+  var at=$("#ad-toggle"),ap=$("#ad-panel");
+  ap.setAttribute("inert","");
+  at.addEventListener("click",function(){
+    var open=at.getAttribute("aria-expanded")==="true";
+    at.setAttribute("aria-expanded",String(!open));
+    ap.classList.toggle("open",!open);
+    if(open){ap.setAttribute("inert","")}else{
+      ap.removeAttribute("inert");
+      var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
+      setTimeout(function(){ap.scrollIntoView({behavior:rm?"auto":"smooth",block:"nearest"})},380);
+    }
+  });
+  if(CONFIG.maps){var wh=$(".where");if(wh){wh.style.cursor="pointer";wh.setAttribute("role","link");wh.tabIndex=0;wh.onclick=function(){window.open(CONFIG.maps,"_blank","noopener")}}}
+  $("#year").textContent=new Date().getFullYear();
+  var els=document.querySelectorAll(".lockup,.tagline,.note,.where,.item,.pix,.ad,.foot");
+  if("IntersectionObserver" in window){
+    els.forEach(function(el){el.classList.add("rv")});
+    document.documentElement.classList.add("rv-on");
+    var io=new IntersectionObserver(function(entries){
+      entries.filter(function(e){return e.isIntersecting})
+        .sort(function(a,b){return a.boundingClientRect.top-b.boundingClientRect.top})
+        .forEach(function(e,i){
+          var el=e.target,d=Math.min(i*90,450);
+          el.style.transitionDelay=d+"ms";el.classList.add("in");io.unobserve(el);
+          setTimeout(function(){el.style.transitionDelay=""},d+1100);
+        });
+    },{threshold:.12,rootMargin:"0px 0px -4% 0px"});
+    els.forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
